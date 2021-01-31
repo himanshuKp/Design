@@ -7,9 +7,7 @@ Dark green: #28b485
 
 */
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -26,23 +24,22 @@ body {
     line-height: 1.7;
     color: #777777;
     padding: 30px;
-
     box-sizing: border-box;
 }
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba(126, 213, 111, 0.801), rgb(40, 180, 133, 0.801)), url(../img/hero.jpg);
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgb(40, 180, 133, 0.801)), url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .header__logo-box {
     position: absolute;
     top: 4rem;
-    left: 4rem;    
+    left: 4rem;
 }
 
 .header__logo {
@@ -62,7 +59,6 @@ body {
     font-size: 1.6rem;
     text-transform: uppercase;
     margin-bottom: 5rem;
-
     backface-visibility: hidden;
 }
 
@@ -71,7 +67,6 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 4rem;
-    
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -84,56 +79,49 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.9rem;
-
     animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-10rem);
     }
-
-    80%{
+    80% {
         transform: translateX(1rem);
     }
-
-    100%{
+    100% {
         opacity: 1;
         transform: translate(0);
     }
 }
 
 @keyframes moveInRight {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(10rem);
     }
-
-    80%{
+    80% {
         transform: translateX(-1rem);
     }
-
-    100%{
+    100% {
         opacity: 1;
         transform: translate(0);
     }
 }
 
 @keyframes moveInBottom {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(3rem);
     }
-
-    100%{
+    100% {
         opacity: 1;
         transform: translate(0);
     }
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
     position: relative;
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -163,7 +151,7 @@ body {
     content: "";
     display: inline-block;
     height: 100%;
-    width: 100%;    
+    width: 100%;
     border-radius: 10rem;
     position: absolute;
     top: 0;
@@ -176,7 +164,7 @@ body {
     background-color: #ffffff;
 }
 
-.btn:hover::after{
+.btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
