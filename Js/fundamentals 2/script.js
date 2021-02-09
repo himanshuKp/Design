@@ -160,6 +160,35 @@ console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 
 // find the first name in the friends in object himanshu
 // console.log(`${himanshu.firstName} has ${himanshu.friends.length} friends, and his best friend is called ${himanshu.friends[0]}.`);
 
+// CHALLENGE 3
 
+// const markSummary = {
+//     fullName: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+//     bmi: 0,
+//     calcBMI: function(){
+//         this.bmi = this.mass / (this.height)**2;
+//     }
+// }
 
+// const johnSummary = {
+//     fullName: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+//     bmi: 0,
+//     calcBMI: function(){
+//         this.bmi = this.mass / (this.height)**2;
+//     }
+// }
 
+// markSummary.calcBMI();
+// johnSummary.calcBMI();
+// const higherBMIUser = johnSummary.bmi>markSummary.bmi ? johnSummary.fullName.substr(0,4):markSummary.fullName.substr(0,4);
+// const higherBMI = johnSummary.bmi>markSummary.bmi ? johnSummary.bmi.toPrecision(3): markSummary.bmi.toPrecision(3);
+// const lowerBMIUser = johnSummary.bmi<markSummary.bmi ? johnSummary.fullName.substr(0,4):markSummary.fullName.substr(0,4);
+// const lowerBMI = johnSummary.bmi<markSummary.bmi ? johnSummary.bmi.toPrecision(3): markSummary.bmi.toPrecision(3);
+
+// // console.log(`${higherBMIUser}'s BMI {${higherBMI}} is higher than ${lowerBMIUser}'s {${lowerBMI}}`);
+
+// console.log(Math.trunc(Math.random()*6)+1)
