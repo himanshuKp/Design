@@ -61,3 +61,44 @@ console.log(friends.indexOf('himanshu'));   // find index of passed element in a
 console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 if not matched or found
 */
 
+// tip calculator challenge
+
+const bills = [125, 555, 44];
+const tips = [];
+const total = []
+
+calculateTips(bills);
+
+calculateTotal(bills, tips);
+
+console.log("Bills: "+bills);
+console.log("Tips: "+tips);
+console.log("Total bill: "+total);
+
+function calcTip(billTotal) {
+    var billWithTip =  0;
+    if(billTotal >= 50 && billTotal <=300){
+        billWithTip = billTotal*0.15;
+    } else {
+        billWithTip = billTotal*0.20;
+    }
+    return billWithTip;
+}
+
+function calculateTips(bills){
+    for(var i=0;i<bills.length;i++){
+        var tipValue = 0;
+        tipValue = calcTip(bills[i]);
+        tips.push(tipValue);
+    }
+}
+
+function calculateTotal(bills, tips){
+    for(var i=0;i<bills.length;i++){
+        for(var j=0;j<tips.length;j++){
+            if(i === j){
+                total.push(Number(bills[i])+Number(tips[j]));
+            }            
+        }
+    }
+}
