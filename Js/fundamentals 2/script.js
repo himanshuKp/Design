@@ -46,7 +46,18 @@
 //     }
 // }
 
+/*
 const friends = ['abhishek','raj','himanshu'];
 friends.push(22);
 friends.push([true, false]);
+const newLength = friends.push(4);  //find the length of the array 
 console.log(friends);
+console.log(newLength);
+console.log(friends.includes('abhishek'));  //true if found in array, else false
+console.log(friends.includes('Abhisehk'));  // use strict method ===
+console.log(friends.includes('bob'));
+
+console.log(friends.indexOf('himanshu'));   // find index of passed element in array
+console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 if not matched or found
+*/
+
