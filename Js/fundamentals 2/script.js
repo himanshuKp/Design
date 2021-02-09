@@ -98,12 +98,12 @@ console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 
 //         for(var j=0;j<tips.length;j++){
 //             if(i === j){
 //                 total.push(Number(bills[i])+Number(tips[j]));
-//             }            
+//             }
 //         }
 //     }
 // }
 
-//object 
+//object
 // const himanshu = {
 //     firstName: 'himanshu',
 //     lastName: 'kandpal',
@@ -127,7 +127,6 @@ console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 
 
 // using dot notation
 // console.log(himanshu.calcAge(`${himanshu.birthYear}`));
-
 
 // using brackets
 // console.log(himanshu['calcAge'](`${himanshu.birthYear}`));
@@ -192,3 +191,64 @@ console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 
 // // console.log(`${higherBMIUser}'s BMI {${higherBMI}} is higher than ${lowerBMIUser}'s {${lowerBMI}}`);
 
 // console.log(Math.trunc(Math.random()*6)+1)
+
+// const x = 23;
+
+// const name = 'himanshu';
+
+// const calcAge = (birthYear) => 2039 - birthYear;
+
+// console.log();
+
+// const temperatures = [3, -2, -4, -1, 'error', 9, 13, 15, 18, 9, 5];
+
+// const calcTempAmplitute = function (temps) {
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; i++) {
+//     const currentTemp = temps[i];
+//     if (typeof currentTemp !== 'number') continue; //skip the current item and move on to next item on array
+
+//     if (temps[i] > max) {
+//       max = temps[i];
+//     }
+//     if (temps[i] < min) {
+//       min = temps[i];
+//     }
+//   }
+//   console.log(max);
+//   console.log(min);
+// };
+
+// calcTempAmplitute(temperatures);
+
+// const array2 = [2, 3, 4, 5, 6, 0o7, 2, 2, -2, -4]; //04,02 does not work and will throw error "0"-prefixed octal literals and octal escape sequences are deprecated, work if 0o is used instead
+// const array3 = temperatures.concat(array2);
+// console.log(array3);
+
+// const measureKelvin = function () {
+//   const measurements = {
+//     type: 'temp',
+//     unit: 'celcius',
+//     value: Number(prompt('degree celcius')),
+//   };
+
+//   console.log(measurements);
+//   console.table(measurements);
+//   const kelvin = measurements.value + 257;
+//   return kelvin;
+// };
+
+// console.log(measureKelvin());
+
+const maxTemperatures = [17, 21, 23];
+
+function printForecast(arr) {
+  let finalOutput = '';
+  for (let i = 0; i < arr.length; i++) {
+    finalOutput = finalOutput.concat(`... ${arr[i]}C in ${i + 1} days `);
+  }
+  return finalOutput;
+}
+
+console.log(printForecast(maxTemperatures));
