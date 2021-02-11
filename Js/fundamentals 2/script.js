@@ -241,14 +241,14 @@ console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 
 
 // console.log(measureKelvin());
 
-const maxTemperatures = [17, 21, 23];
+// const maxTemperatures = [17, 21, 23];
 
-function printForecast(arr) {
-  let finalOutput = '';
-  for (let i = 0; i < arr.length; i++) {
-    finalOutput = finalOutput.concat(`... ${arr[i]}C in ${i + 1} days `);
-  }
-  return finalOutput;
-}
+// function printForecast(arr) {
+//   let finalOutput = '';
+//   for (let i = 0; i < arr.length; i++) {
+//     finalOutput = finalOutput.concat(`... ${arr[i]}C in ${i + 1} days `);
+//   }
+//   return finalOutput;
+// }
 
-console.log(printForecast(maxTemperatures));
+// console.log(printForecast(maxTemperatures));
