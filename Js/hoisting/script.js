@@ -90,3 +90,63 @@ function deleteShoppingCart() {
 
 // const f = him.calcAge; //this will not work because f is not linked to any object
 // f();
+
+// var firstName = "hImanshu";
+
+// const jonas = {
+//   firstName: "Jonas",
+//   year: 1993,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2021 - this.year);
+
+//     // // pre ES6 solution
+//     // const self = this; //self or that
+//     // const isMillenial = function () {
+//     //   console.log(this); //inside a regular function call, this keyword is undefined.
+//     //   console.log(self); //through scope chain, self is defined as this keyword
+//     //   //   console.log(this.year >= 1981 && this.year <= 1996);
+//     // };
+
+//     //ES6 solution
+//     const isMillenial = () => {
+//       //arrow function inherits this keyword from the parent scope
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+//   greet: () => console.log(this), //points to global window object
+//   greeting: () => console.log(this.firstName),
+//   greeter: function () {
+//     console.log(this.firstName);
+//   },
+// };
+
+// jonas.greet(); //Hey undefined (arrow function does not get its own this keyword)
+
+// // console.log(this.firstName); //we dont get error, output: undefined
+// jonas.greeting(); //output: himanshu
+
+// jonas.greeter(); //output: jonas
+
+// variable created with var creates global object
+
+// jonas.calcAge();
+
+// const addExpr = function () {
+//   let total = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     total += arguments[i];
+//   }
+//   console.log(total);
+// };
+
+// addExpr(2, 3, 3, 3, 3, 3, 3);
+
+// const addArrow = (a, b) => {
+//   console.log(arguments); //error: Uncaught ReferenceError: arguments is not defined
+//   return a + b;
+// };
+
+// addArrow(2, 3, 5);
