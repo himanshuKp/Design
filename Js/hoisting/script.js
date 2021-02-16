@@ -150,3 +150,28 @@ function deleteShoppingCart() {
 // };
 
 // addArrow(2, 3, 5);
+
+// const friend = {
+//   name: "Jonas",
+//   age: 30,
+// };
+
+// const me = friend;
+// me.age = 27;
+// console.log(`Friend: ${friend.age}`); // 27
+// console.log(`Mine age: ${me.age}`); // 27
+
+// const prat = {
+//   fistname: "prat",
+//   lastname: "sharma",
+//   age: 25,
+// };
+
+// // const marriedPrat = prat;    //does not create new object
+// // copy one object to another object and creates a new copy and point to new reference in heap and callstack
+// const marriedPrat = Object.assign({}, prat);
+
+// marriedPrat.lastname = "joshi";
+
+// console.log("Before marriage: ", prat);
+// console.log(`After marriage: `, marriedPrat);
