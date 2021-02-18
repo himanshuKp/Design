@@ -165,6 +165,12 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
 // const arr = [7, 8, 9];
@@ -178,8 +184,32 @@ const restaurant = {
 // console.log(newMenu);
 
 // copy array
-const mainMenuCopy = [...restaurant.mainMenu];
+// const mainMenuCopy = [...restaurant.mainMenu];
 
 // join 2 array
-const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menu);
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(menu);
+
+// Iterables: arrays, strings, maps, sets, NOT objects
+// const str = "James";
+// const letters = [...str];
+// console.log(letters);
+
+// const ingredients = [
+//   prompt(`Let's make pasta! Ingredient 1?`),
+//   prompt(`Let's make pasta! Ingredient 2?`),
+//   prompt(`Let's make pasta! Ingredient 3?`),
+// ];
+
+// restaurant.orderPasta(...ingredients); //Here is your delicious pasta with 2, 3 and 4
+
+// since ES2018 spread operator also works on objects
+// create shallow copy [Shallow Copy: It makes a copy of the reference to X into Y.
+// Think about it as a copy of X’s Address. So, the addresses of X and Y will be the same
+// i.e. they will be pointing to the same memory location.]
+// const newRestaurant = { ...restaurant, founder: "Guiseppe" };
+
+// console.log(newRestaurant);
+// newRestaurant.name = "himanshu p";
+// console.log(newRestaurant.name);
+// console.log(restaurant.name);
