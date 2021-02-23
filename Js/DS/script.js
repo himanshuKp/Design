@@ -131,7 +131,7 @@
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-const hours = {
+const openingHours = {
   [weekdays[3]]: {
     open: 12,
     close: 22,
@@ -153,7 +153,7 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  hours,
+  openingHours,
 
   order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
@@ -177,7 +177,39 @@ const restaurant = {
   },
 };
 
-console.log(restaurant);
+/*
+----------------OPTIONAL CHAINING--------------
+WITH optional chaining if something is not defined, undefined is return immediately*/
+
+if (restaurant.openingHours && restaurant.openingHours.mon) {
+  console.log(restaurant.openingHours.mon.open);
+}
+
+// WITH OPTIONAL CHAINING (?.)
+console.log(restaurant.openingHours.mon?.open);
+
+// we can have multiple optional chaining
+console.log(restaurant.openingHours?.mon?.open);
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  // console.log(day);
+  // using nullish coallesing operator
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// METHODS
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exists.');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exists.');
+
+// ARRAYS
+const users = [{ name: 'himanshu', email: 'himanshukp324@gmail.com' }];
+const newUser = [];
+console.log(users[0]?.name ?? `Users array empty`);
+console.log(newUser[0]?.name ?? `New Users array empty`);
+
+// console.log(restaurant);
 
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const item of menu) {
