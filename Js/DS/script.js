@@ -129,85 +129,103 @@
 
 // console.log(orderDelivery);
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-const openingHours = {
-  [weekdays[3]]: {
-    open: 12,
-    close: 22,
-  },
-  [weekdays[4]]: {
-    open: 11,
-    close: 23,
-  },
-  [weekdays[5]]: {
-    open: 0,
-    close: 24,
-  },
-};
+// const openingHours = {
+//   [weekdays[3]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   [weekdays[4]]: {
+//     open: 11,
+//     close: 23,
+//   },
+//   [weekdays[5]]: {
+//     open: 0,
+//     close: 24,
+//   },
+// };
 
 /***************************The spread operator***************************/
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  openingHours,
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+//   openingHours,
 
-  order(starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
+//   order(starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
 
-  orderDelivery({ starterIndex = 1, mainIndex = 0, time = '22:00', address }) {
-    console.log(
-      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-    );
-  },
+//   orderDelivery({ starterIndex = 1, mainIndex = 0, time = '22:00', address }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//     );
+//   },
 
-  orderPasta(ing1, ing2, ing3) {
-    console.log(
-      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
-    );
-  },
+//   orderPasta(ing1, ing2, ing3) {
+//     console.log(
+//       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+//     );
+//   },
 
-  orderPizza(mainIngredient, ...otherIngredients) {
-    console.log(mainIngredient);
-    console.log(otherIngredients);
-  },
-};
+//   orderPizza(mainIngredient, ...otherIngredients) {
+//     console.log(mainIngredient);
+//     console.log(otherIngredients);
+//   },
+// };
+
+// PROPERTY NAMES
+// const properties = Object.keys(openingHours);
+// console.log(properties);
+
+// let openStr = `We are open on ${properties.length} days: `;
+// for (const day of properties) {
+//   openStr += `${day}, `;
+// }
+// console.log(openStr);
+
+// // ENTIRE OBJECT
+// const entries = Object.entries(openingHours);
+// // console.log(entries);
+
+// for (const [key, { open, close }] of entries) {
+//   console.log(`On ${key} we open at ${open} and close at ${close}`);
+// }
 
 /*
 ----------------OPTIONAL CHAINING--------------
 WITH optional chaining if something is not defined, undefined is return immediately*/
 
-if (restaurant.openingHours && restaurant.openingHours.mon) {
-  console.log(restaurant.openingHours.mon.open);
-}
+// if (restaurant.openingHours && restaurant.openingHours.mon) {
+//   console.log(restaurant.openingHours.mon.open);
+// }
 
-// WITH OPTIONAL CHAINING (?.)
-console.log(restaurant.openingHours.mon?.open);
+// // WITH OPTIONAL CHAINING (?.)
+// console.log(restaurant.openingHours.mon?.open);
 
-// we can have multiple optional chaining
-console.log(restaurant.openingHours?.mon?.open);
+// // we can have multiple optional chaining
+// console.log(restaurant.openingHours?.mon?.open);
 
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-for (const day of days) {
-  // console.log(day);
-  // using nullish coallesing operator
-  const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day}, we open at ${open}`);
-}
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for (const day of days) {
+//   // console.log(day);
+//   // using nullish coallesing operator
+//   const open = restaurant.openingHours[day]?.open ?? 'closed';
+//   console.log(`On ${day}, we open at ${open}`);
+// }
 
-// METHODS
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exists.');
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exists.');
+// // METHODS
+// console.log(restaurant.order?.(0, 1) ?? 'Method does not exists.');
+// console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exists.');
 
-// ARRAYS
-const users = [{ name: 'himanshu', email: 'himanshukp324@gmail.com' }];
-const newUser = [];
-console.log(users[0]?.name ?? `Users array empty`);
-console.log(newUser[0]?.name ?? `New Users array empty`);
+// // ARRAYS
+// const users = [{ name: 'himanshu', email: 'himanshukp324@gmail.com' }];
+// const newUser = [];
+// console.log(users[0]?.name ?? `Users array empty`);
+// console.log(newUser[0]?.name ?? `New Users array empty`);
 
 // console.log(restaurant);
 
@@ -221,7 +239,7 @@ console.log(newUser[0]?.name ?? `New Users array empty`);
 //   console.log(`${i + 1}: ${element}`);
 // }
 
-// Coding Challenge #2
+// Coding Challenge #1
 
 /* 
 We're building a football betting app (soccer for my American friends 😅)!
@@ -237,46 +255,93 @@ along with the number of goals that were scored in total (number of player names
 TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
 */
 
-// const game = {
-//   team1: 'Bayern Munich',
-//   team2: 'Borrussia Dortmund',
-//   players: [
-//     [
-//       'Neuer',
-//       'Pavard',
-//       'Martinez',
-//       'Alaba',
-//       'Davies',
-//       'Kimmich',
-//       'Goretzka',
-//       'Coman',
-//       'Muller',
-//       'Gnarby',
-//       'Lewandowski',
-//     ],
-//     [
-//       'Burki',
-//       'Schulz',
-//       'Hummels',
-//       'Akanji',
-//       'Hakimi',
-//       'Weigl',
-//       'Witsel',
-//       'Hazard',
-//       'Brandt',
-//       'Sancho',
-//       'Gotze',
-//     ],
-//   ],
-//   score: '4:0',
-//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-//   date: 'Nov 9th, 2037',
-//   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
-//   },
-// };
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+// Coding Challenge #2
+
+/* 
+Let's continue with our football betting app!
+1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+      Odd of victory Bayern Munich: 1.33
+      Odd of draw: 3.25
+      Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+      {
+        Gnarby: 1,
+        Hummels: 1,
+        Lewandowski: 2
+      }
+GOOD LUCK 😀
+*/
+
+// 1
+// for (const [goal, name] of game.scored.entries()) {
+//   console.log(`Goal ${goal}: ${name}`);
+// }
+
+// 2
+// const gameOdds = Object.values(game.odds);
+// let sum = 0;
+// for (let i = 0; i < gameOdds.length; i++) {
+//   sum += gameOdds[i];
+// }
+// const avg = sum / gameOdds.length;
+// console.log(`Average odds: ${avg}`);
+
+// 3
+// for (const [team, odds] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : game[team];
+//   console.log(`Odd of ${teamStr}: ${odds}`);
+// }
+
+// 4
+// const scorers = {};
+// for (const player of game.scored) {
+//   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+// }
+// console.log(scorers);
 
 // // 1
 // const [player1, player2] = game.players;
