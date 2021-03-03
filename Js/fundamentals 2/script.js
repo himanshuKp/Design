@@ -250,6 +250,7 @@ console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 
 //   }
 //   return finalOutput;
 // }
+<<<<<<< HEAD
 
 // console.log(printForecast(maxTemperatures));
 
@@ -296,3 +297,7 @@ const uniqueStaffArray = [...new Set(staff)];
 
 // find no of unique iteratbles in a string
 // console.log(new Set('himanshukandpal').size);
+=======
+
+// console.log(printForecast(maxTemperatures));
+>>>>>>> ab00ecc38d173c5997cf630f5bcfb92a7b3ade31
