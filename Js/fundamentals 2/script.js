@@ -250,5 +250,54 @@ console.log(friends.indexOf('Himanshu'));   // use strict comparison, return -1 
 //   }
 //   return finalOutput;
 // }
+<<<<<<< HEAD
 
 // console.log(printForecast(maxTemperatures));
+
+// SETS
+const ordersSet = new Set(['pizza', 'pizza', 'risotto', 'pasta', 'pasta']);
+// console.log(ordersSet);
+
+// get set size
+// console.log(ordersSet.size);
+
+const varSet = new Set('Himanshu');
+// console.log(varSet);
+
+// check if element is in set
+// console.log(ordersSet.has('pizza'));    //true or false
+
+// add element to set
+ordersSet.add('garlic bread');
+
+// delete element from set
+// must match exactly, case sensitive
+ordersSet.delete('pizza');
+
+// delete all element of set
+// ordersSet.clear();
+
+// console.log(ordersSet);
+
+// iterate through set
+// for (const order of ordersSet) {
+//   console.log(order);
+// }
+
+const staff = ['waiter', 'driver', 'cheff', 'waiter', 'driver', 'cheff'];
+
+// const uniqueStaff = new Set(staff);
+// console.log(uniqueStaff);
+
+// get unique from array
+// step 1: pass array through set
+// step 2: use spread operator on set
+const uniqueStaffArray = [...new Set(staff)];
+// console.log(uniqueStaffArray);
+
+// find no of unique iteratbles in a string
+// console.log(new Set('himanshukandpal').size);
+=======
+
+// console.log(printForecast(maxTemperatures));
+>>>>>>> ab00ecc38d173c5997cf630f5bcfb92a7b3ade31
